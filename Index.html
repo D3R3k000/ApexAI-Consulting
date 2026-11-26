@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- CUSTOMIZE: Update your firm/personal name and site description below -->
-  <title>Alder &amp; Stone Operations | Support &amp; IT Workflow Consulting</title>
-  <meta name="description" content="Practical AI triage, verified knowledge retrieval, and human-in-the-loop workflows for SMB customer support and internal IT teams." />
+  <!-- CUSTOMIZE: Update site description if needed -->
+  <title>Apex AI | Support, IT &amp; E-Commerce Operations Consulting</title>
+  <meta name="description" content="Practical AI workflows for customer support, internal IT service desks, and e-commerce operations." />
 
-  <!-- Google Fonts: Plus Jakarta Sans, Inter & JetBrains Mono -->
+  <!-- Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (Clean Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,21 +20,20 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
+            sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
           },
           colors: {
-            alabaster: '#FAFAF8',
+            alabaster: '#FAF9F6',
+            panel: '#F3F1EC',
             surface: '#FFFFFF',
-            subtle: '#F3F3EF',
-            ink: '#141413',
+            ink: '#18181B',
             muted: '#52525B',
-            stoneborder: '#E4E4E0',
+            stoneborder: '#E4E2DD',
             forest: {
               DEFAULT: '#1B4332',
               hover: '#143326',
-              tint: '#ECF3EF',
+              tint: '#EBF1EE',
             }
           }
         }
@@ -45,8 +44,7 @@
 <body class="bg-alabaster text-ink font-sans antialiased selection:bg-forest-tint selection:text-forest overflow-x-hidden">
 
   <!-- =====================================================================
-       1. TOP NAVIGATION
-       CUSTOMIZE: Replace "Alder & Stone Operations" with your name or firm name.
+       1. STICKY TOP NAVIGATION
   ====================================================================== -->
   <header class="sticky top-0 z-50 bg-alabaster/95 backdrop-blur-sm border-b border-stoneborder">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
@@ -54,26 +52,24 @@
         <!-- Brand Wordmark -->
         <a href="#" class="flex items-center gap-2.5 text-ink hover:opacity-85 transition-opacity">
           <span class="w-2.5 h-2.5 bg-forest inline-block rounded-[2px]" aria-hidden="true"></span>
-          <span class="font-display font-bold text-base sm:text-lg tracking-tight">
-            Alder &amp; Stone <span class="font-normal text-muted">Operations</span>
-          </span>
+          <span class="font-serif font-semibold text-xl tracking-tight">Apex AI</span>
         </a>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center gap-8 text-sm text-muted">
-          <a href="#capabilities" class="hover:text-ink transition-colors">Capabilities</a>
-          <a href="#engagement" class="hover:text-ink transition-colors">Engagement Model</a>
-          <a href="#governance" class="hover:text-ink transition-colors">Governance</a>
-          <a href="#contact" class="hover:text-ink transition-colors">Contact</a>
-        </nav>
+        <!-- Desktop Navigation Links + Primary Action -->
+        <div class="flex items-center gap-8">
+          <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-muted">
+            <a href="#solutions" class="hover:text-ink transition-colors">Solutions</a>
+            <a href="#process" class="hover:text-ink transition-colors">Process</a>
+            <a href="#engagement" class="hover:text-ink transition-colors">Engagement</a>
+          </nav>
 
-        <!-- Primary Action + Mobile Menu Trigger -->
-        <div class="flex items-center gap-3">
-          <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-forest hover:bg-forest-hover rounded-[4px] transition-colors">
-            Schedule an Audit
+          <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-forest hover:bg-forest-hover rounded-md transition-colors">
+            Book an Audit
           </a>
+
+          <!-- Mobile Menu Button -->
           <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" aria-expanded="false"
-            class="md:hidden p-2 rounded-[4px] text-ink hover:bg-subtle border border-transparent hover:border-stoneborder focus:outline-none">
+            class="md:hidden p-2 rounded-md text-ink hover:bg-panel border border-transparent hover:border-stoneborder focus:outline-none">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
             </svg>
@@ -84,13 +80,12 @@
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-stoneborder bg-surface px-5 py-4 space-y-1">
-      <a href="#capabilities" class="block py-2.5 text-sm font-medium text-ink hover:text-forest">Capabilities</a>
-      <a href="#engagement" class="block py-2.5 text-sm font-medium text-ink hover:text-forest">Engagement Model</a>
-      <a href="#governance" class="block py-2.5 text-sm font-medium text-ink hover:text-forest">Governance</a>
-      <a href="#contact" class="block py-2.5 text-sm font-medium text-ink hover:text-forest">Contact</a>
+      <a href="#solutions" class="block py-2.5 text-sm font-medium text-ink hover:text-forest">Solutions</a>
+      <a href="#process" class="block py-2.5 text-sm font-medium text-ink hover:text-forest">Process</a>
+      <a href="#engagement" class="block py-2.5 text-sm font-medium text-ink hover:text-forest">Engagement</a>
       <div class="pt-3 mt-2 border-t border-stoneborder">
-        <a href="#contact" class="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-forest hover:bg-forest-hover rounded-[4px]">
-          Schedule an Audit
+        <a href="#contact" class="block w-full text-center px-4 py-2.5 text-sm font-medium text-white bg-forest hover:bg-forest-hover rounded-md">
+          Book an Audit
         </a>
       </div>
     </div>
@@ -98,481 +93,448 @@
 
   <main>
     <!-- =====================================================================
-         2. EDITORIAL HERO SECTION
+         2. EDITORIAL HERO SECTION + ARCHITECTURAL WORKSPACE PHOTOGRAPH
     ====================================================================== -->
-    <section class="pt-14 pb-20 lg:pt-20 lg:pb-24 border-b border-stoneborder">
+    <section class="pt-14 pb-16 lg:pt-20 lg:pb-24 border-b border-stoneborder">
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+        <div class="max-w-3xl space-y-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-forest">
+            Support &middot; IT &middot; E-Commerce Operations
+          </p>
 
-          <!-- Left Column: Plain-Spoken Editorial Positioning -->
-          <div class="lg:col-span-7 space-y-6">
-            <p class="font-mono text-xs uppercase tracking-[0.12em] text-forest font-medium">
-              Support &amp; IT Operations Consulting
-            </p>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[54px] font-medium tracking-tight text-ink leading-[1.1]">
+            Practical AI workflows for lean operations.
+          </h1>
 
-            <h1 class="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight text-ink leading-[1.16]">
-              Cut repetitive ticket load across customer support and internal IT—without risking bad answers.
-            </h1>
+          <p class="text-base sm:text-lg text-muted leading-relaxed max-w-2xl">
+            We help small and mid-sized teams automate repetitive ticket triage, internal IT requests, and order inquiries. Every workflow stays grounded in your verified docs with human approval on edge cases.
+          </p>
 
-            <p class="text-base sm:text-lg text-muted leading-relaxed max-w-2xl">
-              We help 20–250 person teams automate first-line ticket triage, surface verified internal documentation, and deploy human-in-the-loop response drafts. Every workflow is grounded in your existing SOPs and built with clear escalation boundaries.
-            </p>
-
-            <!-- Primary & Secondary CTAs -->
-            <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
-              <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-white bg-forest hover:bg-forest-hover rounded-[4px] transition-colors">
-                Book a 20-Minute Intro Call
-              </a>
-              <a href="#engagement" class="inline-flex items-center justify-center px-2 py-2 text-sm font-medium text-ink hover:text-forest transition-colors">
-                See the 4-step engagement model &rarr;
-              </a>
-            </div>
-
-            <!-- Quiet Factual Metadata Strip -->
-            <div class="pt-6 border-t border-stoneborder grid grid-cols-3 gap-6 max-w-xl">
-              <div>
-                <p class="font-mono text-xs text-muted uppercase">Default Posture</p>
-                <p class="text-sm font-semibold text-ink mt-1">Human-in-the-loop</p>
-              </div>
-              <div>
-                <p class="font-mono text-xs text-muted uppercase">Typical Pilot</p>
-                <p class="text-sm font-semibold text-ink mt-1">2 to 3 weeks</p>
-              </div>
-              <div>
-                <p class="font-mono text-xs text-muted uppercase">Infrastructure</p>
-                <p class="text-sm font-semibold text-ink mt-1">100% client-owned</p>
-              </div>
-            </div>
+          <!-- Primary & Secondary CTAs -->
+          <div class="flex flex-col sm:flex-row sm:items-center gap-3.5 pt-1">
+            <a href="#contact" class="inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-white bg-forest hover:bg-forest-hover rounded-md transition-colors">
+              Book a 15-Min Intro
+            </a>
+            <a href="#solutions" class="inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-ink bg-surface hover:bg-panel border border-stoneborder rounded-md transition-colors">
+              Explore Solutions
+            </a>
           </div>
-
-          <!-- Right Column: Structured Operational Workflow Card -->
-          <div class="lg:col-span-5">
-            <div class="bg-surface border border-stoneborder rounded-[6px] overflow-hidden">
-              <!-- Card Header + Queue Switcher -->
-              <div class="px-4 py-3 bg-subtle border-b border-stoneborder flex items-center justify-between gap-2">
-                <span class="font-mono text-[11px] uppercase tracking-wider text-muted">Workflow Architecture</span>
-                <div class="inline-flex border border-stoneborder rounded-[4px] bg-surface p-0.5 text-xs">
-                  <button id="tab-support" type="button" class="px-2.5 py-1 rounded-[3px] font-medium bg-forest text-white transition-colors">
-                    Support
-                  </button>
-                  <button id="tab-it" type="button" class="px-2.5 py-1 rounded-[3px] font-medium text-muted hover:text-ink transition-colors">
-                    Internal IT
-                  </button>
-                </div>
-              </div>
-
-              <!-- Structured Pipeline Steps -->
-              <div class="divide-y divide-stoneborder text-sm">
-                <!-- Step 1: Inbound Signal -->
-                <div class="p-4">
-                  <div class="flex items-center justify-between mb-1.5">
-                    <span class="font-mono text-[11px] uppercase tracking-wider text-muted">01. Inbound Request</span>
-                    <span id="wf-channel" class="font-mono text-[11px] text-muted">Zendesk #4192</span>
-                  </div>
-                  <p id="wf-input" class="text-ink text-[13px] leading-relaxed bg-alabaster border border-stoneborder rounded-[4px] p-3">
-                    "We added 3 seats mid-cycle yesterday—can you confirm whether annual billing applies a prorated credit?"
-                  </p>
-                </div>
-
-                <!-- Step 2: Classification & Source Lookup -->
-                <div class="p-4 bg-alabaster/50">
-                  <span class="block font-mono text-[11px] uppercase tracking-wider text-muted mb-2.5">02. Triage &amp; Source Verification</span>
-                  <div class="grid grid-cols-2 gap-2.5 text-xs">
-                    <div class="bg-surface border border-stoneborder rounded-[4px] p-2.5">
-                      <span class="block text-muted text-[11px]">Intent &amp; Queue</span>
-                      <span id="wf-intent" class="font-mono font-medium text-ink mt-0.5 block">Billing / Seat Proration</span>
-                    </div>
-                    <div class="bg-surface border border-stoneborder rounded-[4px] p-2.5">
-                      <span class="block text-muted text-[11px]">Approved Reference</span>
-                      <span id="wf-source" class="font-mono font-medium text-forest mt-0.5 block">SOP-BILL-04 (Matched)</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Step 3: Guardrailed Output -->
-                <div class="p-4">
-                  <div class="flex items-center justify-between mb-1.5">
-                    <span class="font-mono text-[11px] uppercase tracking-wider text-muted">03. Agent-Assist Draft</span>
-                    <span id="wf-gate" class="font-mono text-[11px] px-2 py-0.5 rounded-[3px] bg-forest-tint text-forest font-medium">
-                      Requires Agent Approval
-                    </span>
-                  </div>
-                  <p id="wf-draft" class="text-muted text-[13px] leading-relaxed">
-                    Drafted reply citing SOP-BILL-04 proration terms and flagged ticket for billing specialist confirmation before sending.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
+
+        <!-- Wide Editorial Hero Image -->
+        <figure class="mt-12 lg:mt-14 bg-surface border border-stoneborder rounded-lg overflow-hidden">
+          <div class="aspect-[16/9] w-full bg-panel overflow-hidden">
+            <img
+              src="image_generation_content/14880838410338279261"
+              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80';"
+              alt="Apex AI minimalist operations workspace"
+              class="w-full h-full object-cover object-center"
+            />
+          </div>
+          <figcaption class="px-5 py-3.5 bg-panel/70 border-t border-stoneborder flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-muted">
+            <span class="font-medium text-ink">Human-in-the-loop automation for 20&ndash;250 person teams</span>
+            <span>Client-owned infrastructure &middot; Zero vendor lock-in</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- =====================================================================
-         3. THE TWO PRACTICE AREAS (SIDE-BY-SIDE HAIRLINE GRID)
+         3. THREE CORE SOLUTIONS + VISUAL SHOWCASE
     ====================================================================== -->
-    <section id="capabilities" class="py-20 lg:py-24 border-b border-stoneborder">
+    <section id="solutions" class="py-16 lg:py-24 border-b border-stoneborder">
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <!-- Section Header -->
         <div class="max-w-2xl mb-12">
-          <p class="font-mono text-xs uppercase tracking-[0.12em] text-forest font-medium mb-2">
-            Practice Areas
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-forest mb-2">
+            Core Solutions
           </p>
-          <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-ink">
-            Two operational queues, standardized on one disciplined framework.
+          <h2 class="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-ink">
+            Three operational queues, automated safely.
           </h2>
-          <p class="mt-3 text-base text-muted leading-relaxed">
-            In companies under 250 employees, external support and internal IT suffer from the same root problem: repetitive requests, fragmented documentation, and senior staff pulled into Tier-1 interruptions.
-          </p>
         </div>
 
-        <!-- 2-Column 1px Hairline Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 border border-stoneborder rounded-[6px] bg-surface divide-y lg:divide-y-0 lg:divide-x divide-stoneborder">
+        <!-- 3-Column 1px-Bordered Solutions Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 border border-stoneborder rounded-lg bg-surface divide-y lg:divide-y-0 lg:divide-x divide-stoneborder">
           
-          <!-- Track 01: Customer Support Operations -->
+          <!-- 01 / Customer Support -->
           <div class="p-6 sm:p-8 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between pb-4 mb-6 border-b border-stoneborder">
-                <span class="font-mono text-xs uppercase tracking-wider text-forest font-medium">Track 01</span>
-                <span class="font-mono text-xs text-muted">External Customer Care</span>
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-xs font-semibold tracking-wider uppercase text-forest bg-forest-tint px-2.5 py-1 rounded">
+                  01 / Customer Support
+                </span>
+                <!-- Lightweight SVG Icon -->
+                <svg class="w-5 h-5 text-muted" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h8M8 14h5m-7 6l-3 2V6a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H6z" />
+                </svg>
               </div>
 
-              <h3 class="font-display text-xl font-bold text-ink mb-2">
-                Customer Support Operations
+              <h3 class="font-serif text-2xl font-medium text-ink mb-2">
+                Customer Support
               </h3>
               <p class="text-sm text-muted leading-relaxed mb-6">
-                Reduce first-response times and queue backlog while keeping billing, policy, and high-churn conversations firmly under human judgment.
+                Cut first-response times without exposing customers to unverified answers.
               </p>
 
-              <dl class="space-y-4 text-sm">
-                <div class="pl-3.5 border-l-2 border-forest">
-                  <dt class="font-semibold text-ink">Ticket Triage &amp; Intent Tagging</dt>
-                  <dd class="text-muted mt-0.5 leading-relaxed">Automatically categorize incoming tickets by product area, urgency, and customer tier upon arrival.</dd>
-                </div>
-                <div class="pl-3.5 border-l-2 border-stoneborder">
-                  <dt class="font-semibold text-ink">Knowledge-Base Grounded Reply Drafts</dt>
-                  <dd class="text-muted mt-0.5 leading-relaxed">Surface relevant help center articles and prepare accurate response drafts inside your agent workspace.</dd>
-                </div>
-                <div class="pl-3.5 border-l-2 border-stoneborder">
-                  <dt class="font-semibold text-ink">Escalation Rules for Billing, Churn &amp; Edge Cases</dt>
-                  <dd class="text-muted mt-0.5 leading-relaxed">Enforce deterministic routing rules when refunds, disputes, or low-confidence queries appear.</dd>
-                </div>
-                <div class="pl-3.5 border-l-2 border-stoneborder">
-                  <dt class="font-semibold text-ink">Native Helpdesk Integration</dt>
-                  <dd class="text-muted mt-0.5 leading-relaxed">Built directly into Zendesk, Intercom, Freshdesk, or Help Scout—no separate portal for agents to learn.</dd>
-                </div>
-              </dl>
-            </div>
-
-            <div class="mt-8 pt-4 border-t border-stoneborder flex items-center justify-between text-xs">
-              <span class="font-mono text-muted">Primary KPI: First-response &amp; handle time</span>
-              <a href="#contact" class="font-medium text-forest hover:underline">Discuss Support &rarr;</a>
-            </div>
-          </div>
-
-          <!-- Track 02: Internal IT & Service Desk -->
-          <div class="p-6 sm:p-8 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between pb-4 mb-6 border-b border-stoneborder">
-                <span class="font-mono text-xs uppercase tracking-wider text-forest font-medium">Track 02</span>
-                <span class="font-mono text-xs text-muted">Internal Service Desk</span>
-              </div>
-
-              <h3 class="font-display text-xl font-bold text-ink mb-2">
-                Internal IT &amp; Service Desk
-              </h3>
-              <p class="text-sm text-muted leading-relaxed mb-6">
-                Eliminate ad-hoc Slack interruptions and give lean IT leads structured intake, verified runbook guidance, and clean permission gates.
-              </p>
-
-              <dl class="space-y-4 text-sm">
-                <div class="pl-3.5 border-l-2 border-forest">
-                  <dt class="font-semibold text-ink">Structured Employee Intake</dt>
-                  <dd class="text-muted mt-0.5 leading-relaxed">Capture required device, application, and error details upfront before a ticket ever reaches an IT technician.</dd>
-                </div>
-                <div class="pl-3.5 border-l-2 border-stoneborder">
-                  <dt class="font-semibold text-ink">Runbook &amp; SOP Lookup</dt>
-                  <dd class="text-muted mt-0.5 leading-relaxed">Guide staff through approved troubleshooting steps for VPN, SSO, and software issues using your internal wiki.</dd>
-                </div>
-                <div class="pl-3.5 border-l-2 border-stoneborder">
-                  <dt class="font-semibold text-ink">Access &amp; Onboarding Workflow Routing</dt>
-                  <dd class="text-muted mt-0.5 leading-relaxed">Verify manager approval requirements and route SaaS provisioning or hardware requests to the right owner.</dd>
-                </div>
-                <div class="pl-3.5 border-l-2 border-stoneborder">
-                  <dt class="font-semibold text-ink">Diagnostic Packaging for Technicians</dt>
-                  <dd class="text-muted mt-0.5 leading-relaxed">Summarize troubleshooting steps already attempted so escalated tickets are resolved on the first touch.</dd>
-                </div>
-              </dl>
-            </div>
-
-            <div class="mt-8 pt-4 border-t border-stoneborder flex items-center justify-between text-xs">
-              <span class="font-mono text-muted">Primary KPI: Tier-1 deflection &amp; resolution speed</span>
-              <a href="#contact" class="font-medium text-forest hover:underline">Discuss Internal IT &rarr;</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================================
-         4. ENGAGEMENT MODEL (4-STAGE OFFER LADDER)
-    ====================================================================== -->
-    <section id="engagement" class="py-20 lg:py-24 border-b border-stoneborder bg-subtle/60">
-      <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="max-w-2xl mb-12">
-          <p class="font-mono text-xs uppercase tracking-[0.12em] text-forest font-medium mb-2">
-            Engagement Model
-          </p>
-          <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-ink">
-            A staged path designed to prove operational value before scaling.
-          </h2>
-          <p class="mt-3 text-base text-muted leading-relaxed">
-            Every engagement begins with a fixed-scope diagnostic so you have hard numbers on ticket volume, documentation readiness, and expected ROI before committing to a build.
-          </p>
-        </div>
-
-        <!-- Structured Editorial Table / Row List -->
-        <div class="bg-surface border border-stoneborder rounded-[6px] divide-y divide-stoneborder">
-          
-          <!-- Stage 01 -->
-          <div class="p-6 sm:p-7 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-start">
-            <div class="lg:col-span-4">
-              <div class="flex items-center gap-3 mb-1.5">
-                <span class="font-mono text-xs font-medium px-2 py-0.5 rounded-[3px] bg-forest-tint text-forest">01</span>
-                <span class="font-mono text-xs uppercase tracking-wider text-muted">Fixed-Fee Entry</span>
-              </div>
-              <h3 class="font-display text-lg font-bold text-ink">Ticket &amp; Workflow Audit</h3>
-            </div>
-            <div class="lg:col-span-5 text-sm text-muted leading-relaxed">
-              We analyze 60–90 days of historical support and IT tickets, evaluate existing knowledge base and SOP coverage, and identify which workflows are safe to automate versus keep human-only.
-            </div>
-            <div class="lg:col-span-3 lg:text-right">
-              <span class="font-mono text-xs text-muted block">Deliverable</span>
-              <span class="text-sm font-medium text-ink">Prioritized ROI &amp; Risk Roadmap</span>
-            </div>
-          </div>
-
-          <!-- Stage 02 -->
-          <div class="p-6 sm:p-7 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-start">
-            <div class="lg:col-span-4">
-              <div class="flex items-center gap-3 mb-1.5">
-                <span class="font-mono text-xs font-medium px-2 py-0.5 rounded-[3px] bg-subtle text-ink border border-stoneborder">02</span>
-                <span class="font-mono text-xs uppercase tracking-wider text-muted">2–3 Week Build</span>
-              </div>
-              <h3 class="font-display text-lg font-bold text-ink">Human-in-the-Loop Pilot</h3>
-            </div>
-            <div class="lg:col-span-5 text-sm text-muted leading-relaxed">
-              Scoped implementation of automated ticket classification, knowledge retrieval, and agent-assist reply drafts on your highest-volume queue—with mandatory human review before anything sends.
-            </div>
-            <div class="lg:col-span-3 lg:text-right">
-              <span class="font-mono text-xs text-muted block">Deliverable</span>
-              <span class="text-sm font-medium text-ink">Live Pilot + Before/After Metrics</span>
-            </div>
-          </div>
-
-          <!-- Stage 03 -->
-          <div class="p-6 sm:p-7 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-start">
-            <div class="lg:col-span-4">
-              <div class="flex items-center gap-3 mb-1.5">
-                <span class="font-mono text-xs font-medium px-2 py-0.5 rounded-[3px] bg-subtle text-ink border border-stoneborder">03</span>
-                <span class="font-mono text-xs uppercase tracking-wider text-muted">Production Expansion</span>
-              </div>
-              <h3 class="font-display text-lg font-bold text-ink">Connected Workflow Rollout</h3>
-            </div>
-            <div class="lg:col-span-5 text-sm text-muted leading-relaxed">
-              Expand validated workflows across additional queues with CRM or account context lookups, onboarding/access routing, internal SOP documentation, and hands-on team training.
-            </div>
-            <div class="lg:col-span-3 lg:text-right">
-              <span class="font-mono text-xs text-muted block">Deliverable</span>
-              <span class="text-sm font-medium text-ink">Multi-Queue System &amp; Playbooks</span>
-            </div>
-          </div>
-
-          <!-- Stage 04 -->
-          <div class="p-6 sm:p-7 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-start">
-            <div class="lg:col-span-4">
-              <div class="flex items-center gap-3 mb-1.5">
-                <span class="font-mono text-xs font-medium px-2 py-0.5 rounded-[3px] bg-subtle text-ink border border-stoneborder">04</span>
-                <span class="font-mono text-xs uppercase tracking-wider text-muted">Optional Retainer</span>
-              </div>
-              <h3 class="font-display text-lg font-bold text-ink">Ongoing Tuning &amp; Governance</h3>
-            </div>
-            <div class="lg:col-span-5 text-sm text-muted leading-relaxed">
-              Monthly review of draft acceptance rates, escalation accuracy, knowledge base drift as policies change, and third-party API usage costs to keep performance predictable.
-            </div>
-            <div class="lg:col-span-3 lg:text-right">
-              <span class="font-mono text-xs text-muted block">Deliverable</span>
-              <span class="text-sm font-medium text-ink">Monthly Audit &amp; Drift Updates</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================================
-         5. OPERATIONAL GUARDRAILS & PRINCIPLES
-    ====================================================================== -->
-    <section id="governance" class="py-20 lg:py-24 border-b border-stoneborder">
-      <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="max-w-2xl mb-12">
-          <p class="font-mono text-xs uppercase tracking-[0.12em] text-forest font-medium mb-2">
-            Governance &amp; Architecture Principles
-          </p>
-          <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-ink">
-            Designed around the risks operations leaders actually care about.
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Principle 1 -->
-          <div class="bg-surface border border-stoneborder rounded-[6px] p-6">
-            <p class="font-mono text-xs text-forest font-medium mb-3">PRINCIPLE 01</p>
-            <h3 class="font-display text-lg font-bold text-ink mb-2">Human-in-the-Loop by Default</h3>
-            <p class="text-sm text-muted leading-relaxed">
-              We never put an unvetted language model directly in front of paying customers or production IT permissions. Systems start in assist-mode—triaging, summarizing, and drafting—until accuracy is proven over hundreds of real tickets.
-            </p>
-          </div>
-
-          <!-- Principle 2 -->
-          <div class="bg-surface border border-stoneborder rounded-[6px] p-6">
-            <p class="font-mono text-xs text-forest font-medium mb-3">PRINCIPLE 02</p>
-            <h3 class="font-display text-lg font-bold text-ink mb-2">Grounded Strictly in Your Docs</h3>
-            <p class="text-sm text-muted leading-relaxed">
-              Responses are constrained to your verified help center articles, policy documents, and IT runbooks. When documentation is missing or confidence falls below threshold, the workflow explicitly defers to a human instead of guessing.
-            </p>
-          </div>
-
-          <!-- Principle 3 -->
-          <div class="bg-surface border border-stoneborder rounded-[6px] p-6">
-            <p class="font-mono text-xs text-forest font-medium mb-3">PRINCIPLE 03</p>
-            <h3 class="font-display text-lg font-bold text-ink mb-2">Full Client Ownership</h3>
-            <p class="text-sm text-muted leading-relaxed">
-              Everything is deployed inside your own cloud, helpdesk, and automation accounts. You retain full ownership of all prompts, routing logic, documentation indexes, and API keys—with zero proprietary vendor lock-in.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================================
-         6. SCOPE & FIT CHECK / CONTACT SECTION
-         CUSTOMIZE: Update email address, Cal.com/Calendly link, and Formspree/Web3Forms endpoint.
-    ====================================================================== -->
-    <section id="contact" class="py-20 lg:py-24">
-      <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-
-          <!-- Left Column: Direct Details & What to Expect -->
-          <div class="lg:col-span-5 space-y-6">
-            <div>
-              <p class="font-mono text-xs uppercase tracking-[0.12em] text-forest font-medium mb-2">
-                Start a Conversation
-              </p>
-              <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-tight text-ink">
-                Scope &amp; Fit Check
-              </h2>
-              <p class="mt-3 text-sm sm:text-base text-muted leading-relaxed">
-                Share a brief overview of your current support or IT ticket volume and toolset. We will review your notes and follow up within one business day.
-              </p>
-            </div>
-
-            <div class="bg-surface border border-stoneborder rounded-[6px] p-5 space-y-4">
-              <h3 class="font-display text-sm font-bold text-ink">What to expect on an intro call (20 min)</h3>
-              <ul class="space-y-2.5 text-sm text-muted">
+              <ul class="space-y-3 text-sm text-ink">
                 <li class="flex items-start gap-2.5">
-                  <span class="font-mono text-xs text-forest mt-0.5">01.</span>
-                  <span>Review your top 3 repetitive support or IT ticket categories.</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+                  <span>Automated ticket triage, tagging, and priority routing.</span>
                 </li>
                 <li class="flex items-start gap-2.5">
-                  <span class="font-mono text-xs text-forest mt-0.5">02.</span>
-                  <span>Assess existing helpdesk tools and knowledge base structure.</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+                  <span>Policy-grounded draft replies inside your helpdesk.</span>
                 </li>
                 <li class="flex items-start gap-2.5">
-                  <span class="font-mono text-xs text-forest mt-0.5">03.</span>
-                  <span>Confirm whether a fixed-fee Workflow Audit makes financial sense.</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+                  <span>Strict escalation rules for billing, refunds, and VIPs.</span>
                 </li>
               </ul>
             </div>
 
-            <!-- Direct Contact & Calendar Links -->
-            <div class="space-y-3 pt-2 text-sm">
-              <div>
-                <span class="font-mono text-xs uppercase text-muted block">Direct Email</span>
-                <!-- CUSTOMIZE: Replace with your real business email -->
-                <a href="mailto:hello@alderstoneops.com" class="font-medium text-ink hover:text-forest transition-colors">
-                  hello@alderstoneops.com
-                </a>
+            <div class="mt-8 pt-4 border-t border-stoneborder text-xs text-muted">
+              Zendesk &middot; Intercom &middot; Freshdesk &middot; Help Scout
+            </div>
+          </div>
+
+          <!-- 02 / Internal IT Service Desk -->
+          <div class="p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-xs font-semibold tracking-wider uppercase text-forest bg-forest-tint px-2.5 py-1 rounded">
+                  02 / Internal IT
+                </span>
+                <!-- Lightweight SVG Icon -->
+                <svg class="w-5 h-5 text-muted" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
               </div>
-              <div>
-                <span class="font-mono text-xs uppercase text-muted block">Direct Scheduling</span>
-                <!-- CUSTOMIZE: Replace with your Cal.com or Calendly scheduling URL -->
-                <a href="https://cal.com" target="_blank" rel="noopener noreferrer" class="font-medium text-forest hover:underline">
-                  Book a 20-minute slot on Cal.com &rarr;
+
+              <h3 class="font-serif text-2xl font-medium text-ink mb-2">
+                Internal IT Service Desk
+              </h3>
+              <p class="text-sm text-muted leading-relaxed mb-6">
+                Stop ad-hoc Slack interruptions and standardize employee requests.
+              </p>
+
+              <ul class="space-y-3 text-sm text-ink">
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+                  <span>Instant employee troubleshooting from internal runbooks.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+                  <span>Structured intake for SaaS access and onboarding.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+                  <span>Clean diagnostic summaries packaged for technicians.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-stoneborder text-xs text-muted">
+              Slack &middot; Microsoft Teams &middot; Jira Service Management
+            </div>
+          </div>
+
+          <!-- 03 / E-Commerce Operations -->
+          <div class="p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-xs font-semibold tracking-wider uppercase text-forest bg-forest-tint px-2.5 py-1 rounded">
+                  03 / E-Commerce Ops
+                </span>
+                <!-- Lightweight SVG Icon -->
+                <svg class="w-5 h-5 text-muted" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              </div>
+
+              <h3 class="font-serif text-2xl font-medium text-ink mb-2">
+                E-Commerce Operations
+              </h3>
+              <p class="text-sm text-muted leading-relaxed mb-6">
+                Resolve repetitive post-purchase questions and keep order workflows moving.
+              </p>
+
+              <ul class="space-y-3 text-sm text-ink">
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+                  <span>Automated WISMO (order tracking) and returns triage.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+                  <span>Live catalog, inventory, and order status context lookups.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+                  <span>B2B and B2C order exception and fulfillment routing.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-stoneborder text-xs text-muted">
+              Shopify &middot; Gorgias &middot; Loop &middot; NetSuite / 3PLs
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 2-Column Editorial Visual Showcase Beneath Solutions -->
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Visual Card 1: Support & IT -->
+          <div class="bg-surface border border-stoneborder rounded-lg overflow-hidden">
+            <div class="aspect-[4/3] w-full bg-panel overflow-hidden border-b border-stoneborder">
+              <img
+                src="image_generation_content/2461651330726288497"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80';"
+                alt="Operations team reviewing support and IT workflows"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            <div class="p-6">
+              <p class="text-xs font-semibold uppercase tracking-wider text-forest mb-1">
+                Support &amp; Service Desk
+              </p>
+              <h3 class="font-serif text-xl font-medium text-ink">
+                Built inside the tools your team already uses
+              </h3>
+              <p class="mt-2 text-sm text-muted leading-relaxed">
+                Agents review cited drafts in one click—cutting average handle time while keeping tone and policy accuracy consistent.
+              </p>
+            </div>
+          </div>
+
+          <!-- Visual Card 2: E-Commerce Operations -->
+          <div class="bg-surface border border-stoneborder rounded-lg overflow-hidden">
+            <div class="aspect-[4/3] w-full bg-panel overflow-hidden border-b border-stoneborder">
+              <img
+                src="image_generation_content/2920750293292830356"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1200&q=80';"
+                alt="Modern e-commerce operations and fulfillment desk"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            <div class="p-6">
+              <p class="text-xs font-semibold uppercase tracking-wider text-forest mb-1">
+                E-Commerce &amp; Fulfillment
+              </p>
+              <h3 class="font-serif text-xl font-medium text-ink">
+                Connected to live order and return data
+              </h3>
+              <p class="mt-2 text-sm text-muted leading-relaxed">
+                Eliminate manual tab-switching across carrier portals, storefront orders, and return rules during peak volume.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. GUARDRAILS & STANDARDS STRIP
+    ====================================================================== -->
+    <section id="process" class="py-16 lg:py-20 border-b border-stoneborder bg-panel/65">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="mb-10">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-forest mb-2">
+            Operating Standards
+          </p>
+          <h2 class="font-serif text-2xl sm:text-3xl font-medium tracking-tight text-ink">
+            Guardrails built for cautious operators.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-surface border border-stoneborder rounded-lg p-6">
+            <div class="flex items-center gap-2.5 mb-3">
+              <span class="w-2 h-2 rounded-full bg-forest"></span>
+              <h3 class="font-serif text-xl font-medium text-ink">Human-in-the-Loop</h3>
+            </div>
+            <p class="text-sm text-muted leading-relaxed">
+              Workflows start in draft and triage mode—requiring human sign-off before sending replies or changing permissions.
+            </p>
+          </div>
+
+          <div class="bg-surface border border-stoneborder rounded-lg p-6">
+            <div class="flex items-center gap-2.5 mb-3">
+              <span class="w-2 h-2 rounded-full bg-forest"></span>
+              <h3 class="font-serif text-xl font-medium text-ink">Source-Grounded</h3>
+            </div>
+            <p class="text-sm text-muted leading-relaxed">
+              Every answer cites your approved SOPs, policies, or order records—and escalates immediately when confidence is low.
+            </p>
+          </div>
+
+          <div class="bg-surface border border-stoneborder rounded-lg p-6">
+            <div class="flex items-center gap-2.5 mb-3">
+              <span class="w-2 h-2 rounded-full bg-forest"></span>
+              <h3 class="font-serif text-xl font-medium text-ink">Client-Owned Infrastructure</h3>
+            </div>
+            <p class="text-sm text-muted leading-relaxed">
+              Deployed directly inside your own accounts and API keys. You keep 100% ownership of all workflows and prompts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. ENGAGEMENT MODEL (3-STEP HORIZONTAL PROGRESSION)
+    ====================================================================== -->
+    <section id="engagement" class="py-16 lg:py-24 border-b border-stoneborder">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl mb-12">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-forest mb-2">
+            Engagement Model
+          </p>
+          <h2 class="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-ink">
+            Start with hard numbers before building.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 border border-stoneborder rounded-lg bg-surface divide-y md:divide-y-0 md:divide-x divide-stoneborder">
+          <!-- Step 01 -->
+          <div class="p-6 sm:p-8">
+            <span class="inline-block text-xs font-semibold tracking-wider uppercase text-forest bg-forest-tint px-2.5 py-1 rounded mb-4">
+              01 &middot; Fixed-Fee Audit
+            </span>
+            <h3 class="font-serif text-2xl font-medium text-ink mb-2">
+              Workflow Audit
+            </h3>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              We analyze historical tickets, order logs, and SOP gaps to pinpoint your highest-ROI automation opportunities.
+            </p>
+            <p class="text-xs font-medium text-ink pt-4 border-t border-stoneborder">
+              Deliverable: Prioritized ROI &amp; Risk Roadmap
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="p-6 sm:p-8">
+            <span class="inline-block text-xs font-semibold tracking-wider uppercase text-ink bg-panel border border-stoneborder px-2.5 py-1 rounded mb-4">
+              02 &middot; 2&ndash;3 Week Build
+            </span>
+            <h3 class="font-serif text-2xl font-medium text-ink mb-2">
+              Guardrailed Pilot
+            </h3>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              We deploy triage, knowledge lookup, and agent-assist drafts on one high-volume queue with clear escalation rules.
+            </p>
+            <p class="text-xs font-medium text-ink pt-4 border-t border-stoneborder">
+              Deliverable: Live System + Before/After Metrics
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="p-6 sm:p-8">
+            <span class="inline-block text-xs font-semibold tracking-wider uppercase text-ink bg-panel border border-stoneborder px-2.5 py-1 rounded mb-4">
+              03 &middot; Optional Retainer
+            </span>
+            <h3 class="font-serif text-2xl font-medium text-ink mb-2">
+              Ongoing Tuning
+            </h3>
+            <p class="text-sm text-muted leading-relaxed mb-5">
+              Monthly monitoring of draft acceptance, escalation accuracy, policy updates, and API costs as volume grows.
+            </p>
+            <p class="text-xs font-medium text-ink pt-4 border-t border-stoneborder">
+              Deliverable: Monthly Accuracy &amp; Drift Review
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. CONTACT / AUDIT BOOKING SECTION
+         CUSTOMIZE: Update email address, Cal.com link, and Formspree/Web3Forms endpoint.
+    ====================================================================== -->
+    <section id="contact" class="py-16 lg:py-24">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+          <!-- Left Column: Direct Details & Calendar Link -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-forest mb-2">
+                Get Started
+              </p>
+              <h2 class="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-ink">
+                Book a Workflow Audit
+              </h2>
+              <p class="mt-3 text-sm sm:text-base text-muted leading-relaxed">
+                Tell us which queue slows your team down most. We will review your setup and reply within one business day.
+              </p>
+            </div>
+
+            <div class="pt-2 space-y-4">
+              <!-- CUSTOMIZE: Replace href with your Cal.com or Calendly scheduling link -->
+              <a href="https://cal.com" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center justify-center px-5 py-3 text-sm font-medium text-white bg-forest hover:bg-forest-hover rounded-md transition-colors">
+                Schedule a 15-Min Intro Call &rarr;
+              </a>
+
+              <div class="pt-2 text-sm">
+                <span class="block text-xs uppercase tracking-wider text-muted mb-1">Direct Email</span>
+                <!-- CUSTOMIZE: Replace with your real business email -->
+                <a href="mailto:hello@apexaiops.com" class="font-medium text-ink hover:text-forest transition-colors">
+                  hello@apexaiops.com
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Right Column: Restrained Inquiry Form -->
+          <!-- Right Column: Concise 4-Field Inquiry Form -->
           <div class="lg:col-span-7">
-            <div class="bg-surface border border-stoneborder rounded-[6px] p-6 sm:p-8">
+            <div class="bg-surface border border-stoneborder rounded-lg p-6 sm:p-8">
               <!--
                 CUSTOMIZE FORM SUBMISSION:
-                1. Create a free form endpoint at https://formspree.io or https://web3forms.com
-                2. Paste the endpoint URL into `data-endpoint=""` below.
-                3. When left blank, submitting displays a clean local confirmation state for testing.
+                1. Create a free endpoint at https://formspree.io or https://web3forms.com
+                2. Paste the URL into `data-endpoint=""` below.
+                3. When left blank, submitting displays a clean local confirmation message.
               -->
-              <form id="inquiry-form" data-endpoint="" class="space-y-5" novalidate>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <form id="inquiry-form" data-endpoint="" class="space-y-4" novalidate>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label for="name" class="block text-xs font-medium text-ink mb-1.5">Your Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Alex Morgan"
-                      class="w-full px-3.5 py-2.5 rounded-[4px] bg-alabaster border border-stoneborder text-ink placeholder-zinc-400 text-sm focus:outline-none focus:border-forest transition-colors" />
+                    <label for="name" class="block text-xs font-medium text-ink mb-1.5">Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Jordan Taylor"
+                      class="w-full px-3.5 py-2.5 rounded-md bg-alabaster border border-stoneborder text-ink placeholder-zinc-400 text-sm focus:outline-none focus:border-forest transition-colors" />
                   </div>
                   <div>
                     <label for="email" class="block text-xs font-medium text-ink mb-1.5">Work Email *</label>
-                    <input type="email" id="email" name="email" required placeholder="alex@company.com"
-                      class="w-full px-3.5 py-2.5 rounded-[4px] bg-alabaster border border-stoneborder text-ink placeholder-zinc-400 text-sm focus:outline-none focus:border-forest transition-colors" />
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label for="company-size" class="block text-xs font-medium text-ink mb-1.5">Company Size</label>
-                    <select id="company-size" name="company_size"
-                      class="w-full px-3.5 py-2.5 rounded-[4px] bg-alabaster border border-stoneborder text-ink text-sm focus:outline-none focus:border-forest transition-colors">
-                      <option value="15-50">15–50 employees</option>
-                      <option value="51-150" selected>51–150 employees</option>
-                      <option value="151-250">151–250 employees</option>
-                      <option value="250+">250+ employees</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label for="bottleneck" class="block text-xs font-medium text-ink mb-1.5">Primary Bottleneck</label>
-                    <select id="bottleneck" name="primary_bottleneck"
-                      class="w-full px-3.5 py-2.5 rounded-[4px] bg-alabaster border border-stoneborder text-ink text-sm focus:outline-none focus:border-forest transition-colors">
-                      <option value="both" selected>Both Customer Support &amp; Internal IT</option>
-                      <option value="customer-support">Customer Support</option>
-                      <option value="internal-it">Internal IT</option>
-                    </select>
+                    <input type="email" id="email" name="email" required placeholder="jordan@company.com"
+                      class="w-full px-3.5 py-2.5 rounded-md bg-alabaster border border-stoneborder text-ink placeholder-zinc-400 text-sm focus:outline-none focus:border-forest transition-colors" />
                   </div>
                 </div>
 
                 <div>
-                  <label for="notes" class="block text-xs font-medium text-ink mb-1.5">Current Tools &amp; Operational Context *</label>
-                  <textarea id="notes" name="notes" rows="4" required placeholder="Briefly share your current helpdesk/IT tools (e.g., Zendesk, Jira, Slack), approximate weekly ticket volume, and where your team loses the most time."
-                    class="w-full px-3.5 py-2.5 rounded-[4px] bg-alabaster border border-stoneborder text-ink placeholder-zinc-400 text-sm focus:outline-none focus:border-forest transition-colors"></textarea>
+                  <label for="focus-area" class="block text-xs font-medium text-ink mb-1.5">Focus Area</label>
+                  <select id="focus-area" name="focus_area"
+                    class="w-full px-3.5 py-2.5 rounded-md bg-alabaster border border-stoneborder text-ink text-sm focus:outline-none focus:border-forest transition-colors">
+                    <option value="customer-support">Customer Support</option>
+                    <option value="internal-it">Internal IT Service Desk</option>
+                    <option value="ecommerce">E-Commerce Operations</option>
+                    <option value="multiple" selected>Multiple Queues</option>
+                  </select>
                 </div>
 
-                <!-- Form Status Feedback -->
-                <div id="form-status" class="hidden rounded-[4px] p-3.5 text-sm" role="status"></div>
+                <div>
+                  <label for="bottleneck" class="block text-xs font-medium text-ink mb-1.5">Primary Bottleneck &amp; Current Tools *</label>
+                  <input type="text" id="bottleneck" name="bottleneck" required placeholder="e.g., 400+ weekly Zendesk/Shopify tickets, mostly WISMO and returns"
+                    class="w-full px-3.5 py-2.5 rounded-md bg-alabaster border border-stoneborder text-ink placeholder-zinc-400 text-sm focus:outline-none focus:border-forest transition-colors" />
+                </div>
 
-                <button id="submit-btn" type="submit"
-                  class="w-full sm:w-auto px-6 py-3 rounded-[4px] text-sm font-medium text-white bg-forest hover:bg-forest-hover transition-colors">
-                  Send Inquiry
-                </button>
+                <div id="form-status" class="hidden rounded-md p-3.5 text-sm" role="status"></div>
+
+                <div class="pt-1">
+                  <button id="submit-btn" type="submit"
+                    class="w-full sm:w-auto px-6 py-2.5 rounded-md text-sm font-medium text-white bg-forest hover:bg-forest-hover transition-colors">
+                    Send Inquiry
+                  </button>
+                </div>
               </form>
             </div>
           </div>
@@ -584,33 +546,31 @@
 
   <!-- =====================================================================
        7. MINIMAL FOOTER
-       CUSTOMIZE: Update copyright entity name and links below.
   ====================================================================== -->
-  <footer class="border-t border-stoneborder bg-surface py-10">
+  <footer class="border-t border-stoneborder bg-surface py-8">
     <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-muted">
-      <div class="space-y-1">
-        <p class="font-medium text-ink">&copy; <span id="year"></span> Alder &amp; Stone Operations LLC. All rights reserved.</p>
-        <p class="font-mono text-[11px]">Support &amp; IT Service Desk Workflow Consulting</p>
+      <div class="flex items-center gap-2.5">
+        <span class="w-2 h-2 bg-forest inline-block rounded-[2px]" aria-hidden="true"></span>
+        <span class="font-medium text-ink">&copy; <span id="year"></span> Apex AI. All rights reserved.</span>
       </div>
 
       <div class="flex flex-wrap items-center gap-6">
-        <a href="#capabilities" class="hover:text-ink transition-colors">Capabilities</a>
-        <a href="#engagement" class="hover:text-ink transition-colors">Engagement Model</a>
-        <a href="#governance" class="hover:text-ink transition-colors">Governance</a>
-        <!-- CUSTOMIZE: Add your LinkedIn profile URL -->
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-ink transition-colors">LinkedIn</a>
+        <a href="#solutions" class="hover:text-ink transition-colors">Solutions</a>
+        <a href="#process" class="hover:text-ink transition-colors">Process</a>
+        <a href="#engagement" class="hover:text-ink transition-colors">Engagement</a>
+        <a href="#contact" class="hover:text-ink transition-colors">Contact</a>
       </div>
     </div>
   </footer>
 
   <!-- =====================================================================
-       VANILLA JAVASCRIPT: MENU TOGGLE, WORKFLOW PREVIEW TABS & FORM HANDLER
+       VANILLA JAVASCRIPT: MOBILE MENU & FORM SUBMISSION HANDLER
   ====================================================================== -->
   <script>
     // Dynamic copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile navigation drawer toggle
+    // Mobile menu toggle
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
@@ -624,51 +584,7 @@
       });
     });
 
-    // Hero Workflow Card Tab Switcher (Support vs. Internal IT)
-    const workflowExamples = {
-      support: {
-        channel: 'Zendesk #4192',
-        input: '"We added 3 seats mid-cycle yesterday—can you confirm whether annual billing applies a prorated credit?"',
-        intent: 'Billing / Seat Proration',
-        source: 'SOP-BILL-04 (Matched)',
-        gate: 'Requires Agent Approval',
-        draft: 'Drafted reply citing SOP-BILL-04 proration terms and flagged ticket for billing specialist confirmation before sending.'
-      },
-      it: {
-        channel: 'Jira IT-814 • Slack',
-        input: '"Just received my replacement laptop—Okta is blocking access to Snowflake and AWS staging roles."',
-        intent: 'IAM / Role Provisioning',
-        source: 'RUNBOOK-IAM-09 (Matched)',
-        gate: 'Manager Sign-Off Req.',
-        draft: 'Packaged device ID and missing group mappings per RUNBOOK-IAM-09, and routed a 1-click approval request to manager and IT admin.'
-      }
-    };
-
-    const tabSupport = document.getElementById('tab-support');
-    const tabIt = document.getElementById('tab-it');
-
-    function switchWorkflowTab(type) {
-      const data = workflowExamples[type];
-      document.getElementById('wf-channel').textContent = data.channel;
-      document.getElementById('wf-input').textContent = data.input;
-      document.getElementById('wf-intent').textContent = data.intent;
-      document.getElementById('wf-source').textContent = data.source;
-      document.getElementById('wf-gate').textContent = data.gate;
-      document.getElementById('wf-draft').textContent = data.draft;
-
-      if (type === 'support') {
-        tabSupport.className = 'px-2.5 py-1 rounded-[3px] font-medium bg-forest text-white transition-colors';
-        tabIt.className = 'px-2.5 py-1 rounded-[3px] font-medium text-muted hover:text-ink transition-colors';
-      } else {
-        tabIt.className = 'px-2.5 py-1 rounded-[3px] font-medium bg-forest text-white transition-colors';
-        tabSupport.className = 'px-2.5 py-1 rounded-[3px] font-medium text-muted hover:text-ink transition-colors';
-      }
-    }
-
-    tabSupport.addEventListener('click', () => switchWorkflowTab('support'));
-    tabIt.addEventListener('click', () => switchWorkflowTab('it'));
-
-    // Inquiry Form Validation & Submission Handler
+    // Inquiry form validation & submission
     const inquiryForm = document.getElementById('inquiry-form');
     const formStatus = document.getElementById('form-status');
     const submitBtn = document.getElementById('submit-btn');
@@ -678,11 +594,11 @@
 
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
-      const notes = document.getElementById('notes').value.trim();
+      const bottleneck = document.getElementById('bottleneck').value.trim();
 
-      if (!name || !email || !notes) {
-        formStatus.textContent = 'Please fill in your name, work email, and a brief note on your current tools.';
-        formStatus.className = 'rounded-[4px] p-3.5 text-sm bg-red-50 border border-red-200 text-red-900';
+      if (!name || !email || !bottleneck) {
+        formStatus.textContent = 'Please complete your name, work email, and primary bottleneck.';
+        formStatus.className = 'rounded-md p-3.5 text-sm bg-red-50 border border-red-200 text-red-900';
         return;
       }
 
@@ -697,17 +613,17 @@
             body: new FormData(inquiryForm),
             headers: { 'Accept': 'application/json' }
           });
-          if (!response.ok) throw new Error('Network response was not ok');
+          if (!response.ok) throw new Error('Submission failed');
         } else {
-          await new Promise(resolve => setTimeout(resolve, 400));
+          await new Promise(resolve => setTimeout(resolve, 350));
         }
 
-        formStatus.textContent = `Thank you, ${name}. Your inquiry has been received—we will review your notes and reply to ${email} within one business day.`;
-        formStatus.className = 'rounded-[4px] p-3.5 text-sm bg-forest-tint border border-forest/25 text-forest';
+        formStatus.textContent = `Thanks, ${name}. We have your note and will reply to ${email} within one business day.`;
+        formStatus.className = 'rounded-md p-3.5 text-sm bg-forest-tint border border-forest/25 text-forest';
         inquiryForm.reset();
       } catch (error) {
-        formStatus.textContent = 'Unable to send form right now. Please email us directly using the address on the left.';
-        formStatus.className = 'rounded-[4px] p-3.5 text-sm bg-red-50 border border-red-200 text-red-900';
+        formStatus.textContent = 'Unable to send right now. Please email hello@apexaiops.com directly.';
+        formStatus.className = 'rounded-md p-3.5 text-sm bg-red-50 border border-red-200 text-red-900';
       } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send Inquiry';
